@@ -13,7 +13,6 @@ export class LoginComponent implements OnInit {
   password='';
   isinvalid = false;
   constructor(public router: Router,private hardauth: HardcodeauthService) { 
-    this.isinvalid = false;
   }
 
   ngOnInit() {
