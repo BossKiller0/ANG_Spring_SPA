@@ -2,3 +2,11 @@
 <div class="container">
   welcome {{username}}  <a class="nav-link" href="/todos">here</a>
 </div>
+
+<div class="container">
+  <button (click)="getData()">Get Data</button>
+</div>
+
+<div class="container" *ngIf="recmessage">
+  <h1>{{recmessage}}</h1>
+</div>
