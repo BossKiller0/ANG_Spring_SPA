@@ -14,4 +14,10 @@ export class WelcomeDataService {
   // return "Working";
 }
 
+getWelcomeDataWithParm(name)
+{
+  return this.http.get('http://localhost:8080/hellobeanspathvar/'+name);
+  // return "Working";
+}
+
 }

@@ -22,7 +22,16 @@ export class WelcomeComponent implements OnInit {
   getData(){
     console.log(this.welService.getWelcomeData());
     this.welService.getWelcomeData().subscribe(
-      (response: any) => this.recmessage = response.message
+      (response: any) => this.recmessage = response.message,
+      error => this.recmessage = error.error.message
+    );
+  }
+
+  getDataWithParm(){
+    console.log(this.welService.getWelcomeDataWithParm(this.username));
+    this.welService.getWelcomeDataWithParm(this.username).subscribe(
+      (response: any) => this.recmessage = response.message,
+      error => this.recmessage = error.error.message
     );
   }
 
